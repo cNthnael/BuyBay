@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BuyBay</string>
+    <string name="rightAddress">Temukan\nSuplai Terbaik di Sekitarmu\n</string>
+    <string name="quality">Kemudahan mengakses supplier\nbahan baku\ndimanapun, kapanpun</string>
+    <string name="resetPassDetail">Link Verifikasi akan dikirimikan ke email Anda</string>
+    <string name="resetPassHeader">Reset Kata Sandi</string>
+</resources>

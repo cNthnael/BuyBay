@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "824524996449",
+    "project_id": "buybay-f88a3",
+    "storage_bucket": "buybay-f88a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824524996449:android:f2292a8f502cfe4f9e8f20",
+        "android_client_info": {
+          "package_name": "com.sentraboga.buybay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFIy0DBcoErBpdbQZ9h9IgyhaQoDrWDl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
