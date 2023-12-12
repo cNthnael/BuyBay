@@ -29,14 +29,16 @@ class CartProductAdp: RecyclerView.Adapter<CartProductAdp.CardProductViewHolder>
                     .into(imgCartProd)
 
                 tvProdName.text = cartProduct.product.name
-                tvProdQuantity.text = cartProduct.quantity.toString()
+                tvProdQuantity.text = "x" + cartProduct.quantity.toString()
                 prodDuration.text = cartProduct.subsDuration
 
+                val priceWithQuantity = cartProduct.product.price*cartProduct.quantity
+
                 val formattedPrice: String = if (cartProduct.product.offerPercentage != null) {
-                    val discountedPrice = cartProduct.product.price * (1 - cartProduct.product.offerPercentage)
+                    val discountedPrice = priceWithQuantity * (1 - cartProduct.product.offerPercentage)
                     NumberFormat.getNumberInstance(Locale.US).format(discountedPrice)
                 } else {
-                    NumberFormat.getNumberInstance(Locale.US).format(cartProduct.product.price)
+                    NumberFormat.getNumberInstance(Locale.US).format(priceWithQuantity)
                 }
                 tvProdPrice.text = "Rp $formattedPrice"
             }

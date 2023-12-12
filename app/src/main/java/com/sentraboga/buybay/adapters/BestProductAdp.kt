@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.sentraboga.buybay.data.Product
 import com.sentraboga.buybay.databinding.ProductRvItemBinding
+import com.sentraboga.buybay.helper.getProductPrice
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -30,8 +31,7 @@ class BestProductAdp: RecyclerView.Adapter<BestProductAdp.BestProductViewHolder>
                     .into(imgProduct)
 
                 if (product.offerPercentage != null) {
-                    val remainingPricePercentage = 1f - product.offerPercentage
-                    val priceAfterOffer = remainingPricePercentage * product.price
+                    val priceAfterOffer = product.offerPercentage.getProductPrice(product.price)
                     val formattedPriceAfterOff = NumberFormat.getNumberInstance(Locale.US).format(priceAfterOffer)
                     tvNewPrice.text = "Rp $formattedPriceAfterOff"
 
