@@ -77,8 +77,8 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
                             dialog.dismiss()
                         }
                         .setPositiveButton("Ya"){ dialog,_ ->
-                            viewModel.deleteProdCart(it)
                             dialog.dismiss()
+                            viewModel.deleteProdCart(it)
                         }
                 }
                 alertDialog.create()
@@ -122,6 +122,7 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
             rvCart.visibility = View.GONE
             totalBox.visibility = View.GONE
             buttonConfirmCart.visibility = View.GONE
+            tvHint.visibility = View.GONE
         }
     }
 
@@ -130,6 +131,7 @@ class CartFragment: Fragment(R.layout.fragment_cart) {
             rvCart.visibility = View.VISIBLE
             totalBox.visibility = View.VISIBLE
             buttonConfirmCart.visibility = View.VISIBLE
+            tvHint.visibility = View.VISIBLE
         }
     }
 
